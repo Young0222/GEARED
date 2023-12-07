@@ -1,0 +1,231 @@
+# GLATE's parameter setup
+Cora:
+  seed: 39788
+  learning_rate: 0.0005
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.1
+  reduce_ratio: 0.1
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+CiteSeer:
+  seed: 39788
+  learning_rate: 0.001
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'prelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.0
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.2
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.1
+  reduce_ratio: 0.01
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+PubMed:
+  seed: 23344
+  learning_rate: 0.001
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.4
+  drop_edge_rate_2: 0.1
+  drop_feature_rate_1: 0.0
+  drop_feature_rate_2: 0.2
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.01
+  reduce_ratio: 0.1
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.001
+  lambda_coe: 1.0
+
+Computers:
+  seed: 39788
+  learning_rate: 0.001
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.01
+  reduce_ratio: 0.1
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+Photo:
+  seed: 39788
+  learning_rate: 0.001
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.01
+  reduce_ratio: 0.1
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+CS:
+  seed: 39788
+  learning_rate: 0.001
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.01
+  reduce_ratio: 0.01
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+Physics:
+  seed: 39788
+  learning_rate: 0.001
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.01
+  reduce_ratio: 0.01
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+ogbn-arxiv:
+  seed: 39788
+  learning_rate: 0.001
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.3
+  drop_edge_rate_2: 0.3
+  drop_feature_rate_1: 0.0
+  drop_feature_rate_2: 0.0
+  num_epochs: 20
+  weight_decay: 0.00001
+  coarsen_ratio: 0.01
+  reduce_ratio: 1.0
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+NCI1:
+  seed: 39788
+  learning_rate: 0.0005
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.1
+  reduce_ratio: 1.0
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+PROTEINS:
+  seed: 39788
+  learning_rate: 0.0005
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.1
+  reduce_ratio: 1.0
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
+
+MUTAG:
+  seed: 39788
+  learning_rate: 0.0005
+  num_hidden: 256
+  num_proj_hidden: 256
+  activation: 'rrelu'
+  base_model: 'GCNConv'
+  num_layers: 2
+  drop_edge_rate_1: 0.2
+  drop_edge_rate_2: 0.4
+  drop_feature_rate_1: 0.3
+  drop_feature_rate_2: 0.4
+  num_epochs: 100
+  weight_decay: 0.00001
+  coarsen_ratio: 0.1
+  reduce_ratio: 1.0
+  tau1: 0.8
+  tau2: 0.2
+  varepsilon: 0.01
+  lambda_coe: 1.0
