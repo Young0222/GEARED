@@ -7,11 +7,11 @@ Cora:
   activation: 'rrelu'
   base_model: 'GCNConv'
   num_layers: 2
-  drop_edge_rate_1: 0.2
-  drop_edge_rate_2: 0.4
-  drop_feature_rate_1: 0.3
-  drop_feature_rate_2: 0.4
-  num_epochs: 100
+  drop_edge_rate_1: 0.9
+  drop_edge_rate_2: 0.9
+  drop_feature_rate_1: 0.1
+  drop_feature_rate_2: 0.1
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.1
   reduce_ratio: 0.1
@@ -25,14 +25,14 @@ CiteSeer:
   learning_rate: 0.001
   num_hidden: 256
   num_proj_hidden: 256
-  activation: 'prelu'
+  activation: 'rrelu'
   base_model: 'GCNConv'
   num_layers: 2
-  drop_edge_rate_1: 0.2
-  drop_edge_rate_2: 0.0
-  drop_feature_rate_1: 0.3
-  drop_feature_rate_2: 0.2
-  num_epochs: 100
+  drop_edge_rate_1: 0.9
+  drop_edge_rate_2: 0.9
+  drop_feature_rate_1: 0.1
+  drop_feature_rate_2: 0.1
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.1
   reduce_ratio: 0.01
@@ -53,7 +53,7 @@ PubMed:
   drop_edge_rate_2: 0.1
   drop_feature_rate_1: 0.0
   drop_feature_rate_2: 0.2
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.01
   reduce_ratio: 0.1
@@ -74,7 +74,7 @@ Computers:
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.01
   reduce_ratio: 0.1
@@ -95,7 +95,7 @@ Photo:
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.01
   reduce_ratio: 0.1
@@ -116,7 +116,7 @@ CS:
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.01
   reduce_ratio: 0.01
@@ -137,7 +137,7 @@ Physics:
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.01
   reduce_ratio: 0.01
@@ -179,7 +179,7 @@ NCI1:
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.1
   reduce_ratio: 1.0
@@ -200,7 +200,7 @@ PROTEINS:
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.1
   reduce_ratio: 1.0
@@ -221,7 +221,7 @@ MUTAG:
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
-  num_epochs: 100
+  num_epochs: 20
   weight_decay: 0.00001
   coarsen_ratio: 0.1
   reduce_ratio: 1.0

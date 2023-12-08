@@ -6,7 +6,6 @@ import sys
 from torch_geometric.utils import to_scipy_sparse_matrix
 import numpy as np
 
-
 class LogReg(nn.Module):
     def __init__(self, ft_in, nb_classes):
         super(LogReg, self).__init__()

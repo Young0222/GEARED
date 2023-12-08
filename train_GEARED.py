@@ -32,21 +32,13 @@ from torch_geometric.data import GraphSAINTRandomWalkSampler
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 
 seed = random.randint(1,999999)
-# seed = 758979
 print("pretraining seed: ", seed)
 os.environ['PYTHONHASHSEED'] = str(seed)
 random.seed(seed)
 np.random.seed(seed)
 torch.manual_seed(seed)
 torch.cuda.manual_seed_all(seed)
-torch.backends.cudnn.deterministic = True
-
-
-def torch_cov(input_vec: torch.Tensor):
-    x = input_vec- torch.mean(input_vec,axis=0)
-    cov_matrix = torch.matmul(x.T, x) / (x.shape[0]-1)
-    print("cov_matrix: ", cov_matrix)
-    return torch.det(cov_matrix)
+# torch.cuda.is_available = lambda : False  # using CPU
 
 
 def train(model: Model, x, edge_index, walks, epoch, dataset, lambda_coe, varepsilon):
@@ -80,9 +72,9 @@ def get_split(num_samples: int, train_ratio: float = 0.1, test_ratio: float = 0.
     test_size = int(num_samples * test_ratio)
     indices = torch.randperm(num_samples)
     return {
-        'train': indices[:train_size],
-        'valid': indices[train_size: test_size + train_size],
-        'test': indices[test_size + train_size:]
+        'train': indices[test_size:],
+        'valid': indices[test_size:],
+        'test': indices[:test_size]
     }
 
 
@@ -196,7 +188,6 @@ if __name__ == '__main__':
             sample_edge_index,
             node_idx=nodes_idx,
             sizes=[15,10,5],
-            # sizes=[20,2,1],
             batch_size=102400,
             shuffle=True,
         )
@@ -211,7 +202,6 @@ if __name__ == '__main__':
         print("raw shape: ", data.x.shape, data.edge_index.shape)
         print("coarsen shape: ", sample_x.shape, sample_edge_index.shape)
         
-
         prev = start
         tau_list = []
 
@@ -225,25 +215,19 @@ if __name__ == '__main__':
 
         pretraining_time = prev - start
 
-        print(f'compression_time: {compression_time:.4f}')
-        print(f'rw_time: {rw_time:.4f}')
-        print(f'pretraining_time: {pretraining_time:.4f}')
-
-
         acc_list = []
         print("=== Final ===")
         res_list = []
         std_list = []
         time_list = []
 
-        for i in range(10):
+        for i in range(5):
             print("current time: ", i)
             res = test_LR(model, reduced_data.x, reduced_data.edge_index, reduced_data.y, seed)
             res_list.append(res['ACC']['mean'])
             std_list.append(res['ACC']['std'])
             time_list.append(res['time']['mean'])
-        print("mean ACC: ", np.mean(res_list))
-        best_index = np.argmax(res_list)
-        print(f'max ACC: {res_list[best_index]*100:.1f}, STD: {std_list[best_index]*100:.1f}')
-        print(f'pre-training time, fune-tuning time: {pretraining_time:.1f}, {time_list[best_index]:.1f}')
+
+        print("ACC mean std: ", np.mean(res_list), np.std(res_list))
+        print(f'pre-training time, fune-tuning time: {pretraining_time:.1f}, {np.mean(time_list):.1f}')
 

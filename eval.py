@@ -11,20 +11,18 @@ from sklearn.preprocessing import normalize, OneHotEncoder
 import torch
 from tqdm import tqdm
 from torch import nn
-from torch.optim import Adam
+from torch.optim import Adam, AdamW
 import random
 import os
 from time import perf_counter as t
 
 seed = random.randint(1,999999)
-# seed = 847609
 print("downstream seed: ", seed)
 os.environ['PYTHONHASHSEED'] = str(seed)
 random.seed(seed)
 np.random.seed(seed)
 torch.manual_seed(seed)
 torch.cuda.manual_seed_all(seed)
-torch.backends.cudnn.deterministic = True
 
 def repeat(n_times):
     def decorator(f):
@@ -95,10 +93,11 @@ def label_classification(embeddings, y, ratio):
         'time': now-start
     }
 
-class LogisticRegression_bgrl(nn.Module):
+class LogisticRegression_model(nn.Module):
     def __init__(self, num_features, num_classes):
-        super(LogisticRegression_bgrl, self).__init__()
+        super(LogisticRegression_model, self).__init__()
         self.fc = nn.Linear(num_features, num_classes)
+        self.fc.bias.data.fill_(0.0)
         torch.nn.init.xavier_uniform_(self.fc.weight.data)
 
     def forward(self, x):
@@ -118,21 +117,22 @@ class BaseEvaluator(ABC):
         return result
 
 class LREvaluator(BaseEvaluator):
-    def __init__(self, num_epochs: int = 1000, learning_rate: float = 0.1,
+
+    def __init__(self, num_epochs: int = 300, learning_rate: float = 0.01,
                  weight_decay: float = 0.0, test_interval: int = 20):
         self.num_epochs = num_epochs
         self.learning_rate = learning_rate
         self.weight_decay = weight_decay
         self.test_interval = test_interval
 
-    @repeat(3)
+    @repeat(1)
     def evaluate(self, x: torch.FloatTensor, y: torch.LongTensor, split: dict, seed: int):
         device = x.device
         x = x.detach().to(device)
         input_dim = x.size()[1]
         y = y.to(device)
         num_classes = y.max().item() + 1
-        classifier = LogisticRegression_bgrl(input_dim, num_classes).to(device)
+        classifier = LogisticRegression_model(input_dim, num_classes).to(device)
         optimizer = Adam(classifier.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay)
         output_fn = nn.LogSoftmax(dim=-1)
         criterion = nn.NLLLoss()
