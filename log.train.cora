@@ -1,0 +1,44 @@
+nohup: 忽略输入
+WARNING:root:The OGB package is out of date. Your version is 1.3.5, while the latest version is 1.3.6.
+downstream seed:  681517
+pretraining seed:  837654
+path:  /home/xjc/datasets
+walks:  tensor([[118, 130, 140,  ..., 249, 256, 258],
+        [  0,   0,   0,  ..., 270, 270, 270]]) torch.Size([2, 7373])
+raw shape:  torch.Size([2708, 1433]) torch.Size([2, 10556])
+coarsen shape:  torch.Size([271, 143]) torch.Size([2, 7204])
+(T) | Epoch=001, loss=7.1955, this epoch 0.0234, total 0.0234
+(T) | Epoch=002, loss=6.5955, this epoch 0.0188, total 0.0422
+(T) | Epoch=003, loss=6.3866, this epoch 0.0184, total 0.0606
+(T) | Epoch=004, loss=6.2358, this epoch 0.0203, total 0.0809
+(T) | Epoch=005, loss=6.1058, this epoch 0.0176, total 0.0985
+(T) | Epoch=006, loss=6.0363, this epoch 0.0161, total 0.1147
+(T) | Epoch=007, loss=5.8180, this epoch 0.0233, total 0.1379
+(T) | Epoch=008, loss=5.7187, this epoch 0.0202, total 0.1581
+(T) | Epoch=009, loss=5.4088, this epoch 0.0203, total 0.1784
+(T) | Epoch=010, loss=5.2938, this epoch 0.0185, total 0.1970
+(T) | Epoch=011, loss=5.0726, this epoch 0.0204, total 0.2173
+(T) | Epoch=012, loss=5.1187, this epoch 0.0227, total 0.2401
+(T) | Epoch=013, loss=5.7812, this epoch 0.0217, total 0.2618
+(T) | Epoch=014, loss=5.5439, this epoch 0.0172, total 0.2790
+(T) | Epoch=015, loss=4.7625, this epoch 0.0204, total 0.2994
+(T) | Epoch=016, loss=5.3864, this epoch 0.0213, total 0.3207
+(T) | Epoch=017, loss=4.7784, this epoch 0.0143, total 0.3350
+(T) | Epoch=018, loss=4.7384, this epoch 0.0163, total 0.3514
+(T) | Epoch=019, loss=4.7259, this epoch 0.0144, total 0.3658
+(T) | Epoch=020, loss=4.6977, this epoch 0.0122, total 0.3780
+=== Final ===
+current time:  0
+/home/xjc/anaconda3/envs/lzy_dl/lib/python3.7/site-packages/torch_geometric/deprecation.py:22: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+(E) | label_classification: F1Mi=0.8473+-0.0000, F1Ma=0.8304+-0.0000, ACC=0.8473+-0.0000, time=2.6101+-0.0000
+current time:  1
+(E) | label_classification: F1Mi=0.8362+-0.0000, F1Ma=0.8199+-0.0000, ACC=0.8362+-0.0000, time=1.5955+-0.0000
+current time:  2
+(E) | label_classification: F1Mi=0.8339+-0.0000, F1Ma=0.8214+-0.0000, ACC=0.8339+-0.0000, time=1.5907+-0.0000
+current time:  3
+(E) | label_classification: F1Mi=0.8269+-0.0000, F1Ma=0.8126+-0.0000, ACC=0.8269+-0.0000, time=1.5554+-0.0000
+current time:  4
+(E) | label_classification: F1Mi=0.8339+-0.0000, F1Ma=0.8215+-0.0000, ACC=0.8339+-0.0000, time=1.5061+-0.0000
+ACC mean std:  0.8356252884171665 0.006587195525631908
+pre-training time, fune-tuning time: 0.4, 1.8
