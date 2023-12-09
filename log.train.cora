@@ -1,44 +1,49 @@
 nohup: 忽略输入
 WARNING:root:The OGB package is out of date. Your version is 1.3.5, while the latest version is 1.3.6.
-downstream seed:  681517
-pretraining seed:  837654
-path:  /home/xjc/datasets
-walks:  tensor([[118, 130, 140,  ..., 249, 256, 258],
-        [  0,   0,   0,  ..., 270, 270, 270]]) torch.Size([2, 7373])
-raw shape:  torch.Size([2708, 1433]) torch.Size([2, 10556])
-coarsen shape:  torch.Size([271, 143]) torch.Size([2, 7204])
-(T) | Epoch=001, loss=7.1955, this epoch 0.0234, total 0.0234
-(T) | Epoch=002, loss=6.5955, this epoch 0.0188, total 0.0422
-(T) | Epoch=003, loss=6.3866, this epoch 0.0184, total 0.0606
-(T) | Epoch=004, loss=6.2358, this epoch 0.0203, total 0.0809
-(T) | Epoch=005, loss=6.1058, this epoch 0.0176, total 0.0985
-(T) | Epoch=006, loss=6.0363, this epoch 0.0161, total 0.1147
-(T) | Epoch=007, loss=5.8180, this epoch 0.0233, total 0.1379
-(T) | Epoch=008, loss=5.7187, this epoch 0.0202, total 0.1581
-(T) | Epoch=009, loss=5.4088, this epoch 0.0203, total 0.1784
-(T) | Epoch=010, loss=5.2938, this epoch 0.0185, total 0.1970
-(T) | Epoch=011, loss=5.0726, this epoch 0.0204, total 0.2173
-(T) | Epoch=012, loss=5.1187, this epoch 0.0227, total 0.2401
-(T) | Epoch=013, loss=5.7812, this epoch 0.0217, total 0.2618
-(T) | Epoch=014, loss=5.5439, this epoch 0.0172, total 0.2790
-(T) | Epoch=015, loss=4.7625, this epoch 0.0204, total 0.2994
-(T) | Epoch=016, loss=5.3864, this epoch 0.0213, total 0.3207
-(T) | Epoch=017, loss=4.7784, this epoch 0.0143, total 0.3350
-(T) | Epoch=018, loss=4.7384, this epoch 0.0163, total 0.3514
-(T) | Epoch=019, loss=4.7259, this epoch 0.0144, total 0.3658
-(T) | Epoch=020, loss=4.6977, this epoch 0.0122, total 0.3780
-=== Final ===
-current time:  0
 /home/xjc/anaconda3/envs/lzy_dl/lib/python3.7/site-packages/torch_geometric/deprecation.py:22: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
   warnings.warn(out)
-(E) | label_classification: F1Mi=0.8473+-0.0000, F1Ma=0.8304+-0.0000, ACC=0.8473+-0.0000, time=2.6101+-0.0000
+downstream seed:  584354
+pretraining seed:  937388
+path:  /home/xjc/datasets
+walks:  tensor([[ 36,  39, 141,  ..., 240, 252, 269],
+        [  0,   0,   0,  ..., 270, 270, 270]]) torch.Size([2, 7368])
+raw shape:  torch.Size([2708, 1433]) torch.Size([2, 10556])
+coarsen shape:  torch.Size([271, 143]) torch.Size([2, 13010])
+(T) | Epoch=001, loss=7.3137, this epoch 0.0280, total 0.0280
+(T) | Epoch=002, loss=6.8930, this epoch 0.0169, total 0.0449
+(T) | Epoch=003, loss=6.5234, this epoch 0.0215, total 0.0663
+(T) | Epoch=004, loss=6.2977, this epoch 0.0149, total 0.0813
+(T) | Epoch=005, loss=6.1118, this epoch 0.0148, total 0.0961
+(T) | Epoch=006, loss=5.7581, this epoch 0.0166, total 0.1127
+(T) | Epoch=007, loss=5.5423, this epoch 0.0176, total 0.1303
+(T) | Epoch=008, loss=5.2983, this epoch 0.0127, total 0.1429
+(T) | Epoch=009, loss=5.2826, this epoch 0.0127, total 0.1557
+(T) | Epoch=010, loss=5.8896, this epoch 0.0125, total 0.1682
+(T) | Epoch=011, loss=4.9204, this epoch 0.0126, total 0.1808
+(T) | Epoch=012, loss=5.5294, this epoch 0.0115, total 0.1923
+(T) | Epoch=013, loss=4.7778, this epoch 0.0118, total 0.2041
+(T) | Epoch=014, loss=4.6530, this epoch 0.0127, total 0.2169
+(T) | Epoch=015, loss=5.0702, this epoch 0.0118, total 0.2286
+(T) | Epoch=016, loss=4.4227, this epoch 0.0120, total 0.2406
+(T) | Epoch=017, loss=4.6875, this epoch 0.0120, total 0.2526
+(T) | Epoch=018, loss=4.6321, this epoch 0.0120, total 0.2646
+(T) | Epoch=019, loss=4.3498, this epoch 0.0120, total 0.2765
+(T) | Epoch=020, loss=4.2254, this epoch 0.0116, total 0.2881
+=== Final ===
+current time:  0
+(LR):   0%|          | 0/300 [00:00<?](LR):   0%|          | 0/300 [00:00<?, best test F1Mi=0.575, F1Ma=0.416, ACC=0.575, time=0.0181](LR):   7%|▋         | 20/300 [00:00<00:00, best test F1Mi=0.701, F1Ma=0.634, ACC=0.701, time=0.0333](LR):  13%|█▎        | 40/300 [00:00<00:00, best test F1Mi=0.775, F1Ma=0.76, ACC=0.775, time=0.0489] (LR):  20%|██        | 60/300 [00:00<00:00, best test F1Mi=0.795, F1Ma=0.786, ACC=0.795, time=0.0659](LR):  27%|██▋       | 80/300 [00:00<00:00, best test F1Mi=0.803, F1Ma=0.795, ACC=0.803, time=0.0813](LR):  33%|███▎      | 100/300 [00:00<00:00, best test F1Mi=0.807, F1Ma=0.8, ACC=0.807, time=0.106]  (LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.807, F1Ma=0.8, ACC=0.807, time=0.106](LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.813, F1Ma=0.805, ACC=0.813, time=0.129](LR):  47%|████▋     | 140/300 [00:00<00:00, best test F1Mi=0.817, F1Ma=0.809, ACC=0.817, time=0.153](LR):  53%|█████▎    | 160/300 [00:00<00:00, best test F1Mi=0.822, F1Ma=0.814, ACC=0.822, time=0.178](LR):  60%|██████    | 180/300 [00:00<00:00, best test F1Mi=0.823, F1Ma=0.814, ACC=0.823, time=0.21] (LR):  67%|██████▋   | 200/300 [00:00<00:00, best test F1Mi=0.825, F1Ma=0.815, ACC=0.825, time=0.229](LR):  73%|███████▎  | 220/300 [00:00<00:00, best test F1Mi=0.829, F1Ma=0.82, ACC=0.829, time=0.247] (LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.829, F1Ma=0.82, ACC=0.829, time=0.247](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.831, F1Ma=0.822, ACC=0.831, time=0.264](LR):  87%|████████▋ | 260/300 [00:00<00:00, best test F1Mi=0.83, F1Ma=0.821, ACC=0.83, time=0.281]  (LR):  93%|█████████▎| 280/300 [00:00<00:00, best test F1Mi=0.831, F1Ma=0.821, ACC=0.831, time=0.298](LR): 100%|██████████| 300/300 [00:00<00:00, best test F1Mi=0.831, F1Ma=0.821, ACC=0.831, time=0.298]
+(E) | evaluate: micro_f1=0.8306+-0.0000, macro_f1=0.0000+-0.0000, ACC=0.8306+-0.0000, time=0.2984+-0.0000
 current time:  1
-(E) | label_classification: F1Mi=0.8362+-0.0000, F1Ma=0.8199+-0.0000, ACC=0.8362+-0.0000, time=1.5955+-0.0000
+(LR):   0%|          | 0/300 [00:00<?](LR):   0%|          | 0/300 [00:00<?, best test F1Mi=0.613, F1Ma=0.482, ACC=0.613, time=0.017](LR):   7%|▋         | 20/300 [00:00<00:00, best test F1Mi=0.74, F1Ma=0.696, ACC=0.74, time=0.0344](LR):  13%|█▎        | 40/300 [00:00<00:00, best test F1Mi=0.798, F1Ma=0.789, ACC=0.798, time=0.0519](LR):  20%|██        | 60/300 [00:00<00:00, best test F1Mi=0.813, F1Ma=0.802, ACC=0.813, time=0.0689](LR):  27%|██▋       | 80/300 [00:00<00:00, best test F1Mi=0.822, F1Ma=0.814, ACC=0.822, time=0.0862](LR):  33%|███▎      | 100/300 [00:00<00:00, best test F1Mi=0.825, F1Ma=0.816, ACC=0.825, time=0.103](LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.825, F1Ma=0.816, ACC=0.825, time=0.103](LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.828, F1Ma=0.817, ACC=0.828, time=0.12] (LR):  47%|████▋     | 140/300 [00:00<00:00, best test F1Mi=0.837, F1Ma=0.826, ACC=0.837, time=0.137](LR):  53%|█████▎    | 160/300 [00:00<00:00, best test F1Mi=0.843, F1Ma=0.832, ACC=0.843, time=0.155](LR):  60%|██████    | 180/300 [00:00<00:00, best test F1Mi=0.844, F1Ma=0.833, ACC=0.844, time=0.172](LR):  67%|██████▋   | 200/300 [00:00<00:00, best test F1Mi=0.845, F1Ma=0.834, ACC=0.845, time=0.19] (LR):  73%|███████▎  | 220/300 [00:00<00:00, best test F1Mi=0.841, F1Ma=0.83, ACC=0.841, time=0.211](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.841, F1Ma=0.83, ACC=0.841, time=0.211](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.842, F1Ma=0.83, ACC=0.842, time=0.229](LR):  87%|████████▋ | 260/300 [00:00<00:00, best test F1Mi=0.842, F1Ma=0.83, ACC=0.842, time=0.246](LR):  93%|█████████▎| 280/300 [00:00<00:00, best test F1Mi=0.842, F1Ma=0.829, ACC=0.842, time=0.263](LR): 100%|██████████| 300/300 [00:00<00:00, best test F1Mi=0.842, F1Ma=0.829, ACC=0.842, time=0.263]
+(E) | evaluate: micro_f1=0.8416+-0.0000, macro_f1=0.0000+-0.0000, ACC=0.8416+-0.0000, time=0.2630+-0.0000
 current time:  2
-(E) | label_classification: F1Mi=0.8339+-0.0000, F1Ma=0.8214+-0.0000, ACC=0.8339+-0.0000, time=1.5907+-0.0000
+(LR):   0%|          | 0/300 [00:00<?](LR):   0%|          | 0/300 [00:00<?, best test F1Mi=0.625, F1Ma=0.488, ACC=0.625, time=0.018](LR):   7%|▋         | 20/300 [00:00<00:00, best test F1Mi=0.717, F1Ma=0.634, ACC=0.717, time=0.0352](LR):  13%|█▎        | 40/300 [00:00<00:00, best test F1Mi=0.789, F1Ma=0.762, ACC=0.789, time=0.0524](LR):  20%|██        | 60/300 [00:00<00:00, best test F1Mi=0.806, F1Ma=0.788, ACC=0.806, time=0.0736](LR):  27%|██▋       | 80/300 [00:00<00:00, best test F1Mi=0.818, F1Ma=0.802, ACC=0.818, time=0.091] (LR):  33%|███▎      | 100/300 [00:00<00:00, best test F1Mi=0.823, F1Ma=0.809, ACC=0.823, time=0.108](LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.823, F1Ma=0.809, ACC=0.823, time=0.108](LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.823, F1Ma=0.809, ACC=0.823, time=0.125](LR):  47%|████▋     | 140/300 [00:00<00:00, best test F1Mi=0.829, F1Ma=0.815, ACC=0.829, time=0.143](LR):  53%|█████▎    | 160/300 [00:00<00:00, best test F1Mi=0.831, F1Ma=0.818, ACC=0.831, time=0.16] (LR):  60%|██████    | 180/300 [00:00<00:00, best test F1Mi=0.836, F1Ma=0.823, ACC=0.836, time=0.177](LR):  67%|██████▋   | 200/300 [00:00<00:00, best test F1Mi=0.836, F1Ma=0.823, ACC=0.836, time=0.194](LR):  73%|███████▎  | 220/300 [00:00<00:00, best test F1Mi=0.838, F1Ma=0.824, ACC=0.838, time=0.212](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.838, F1Ma=0.824, ACC=0.838, time=0.212](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.838, F1Ma=0.825, ACC=0.838, time=0.229](LR):  87%|████████▋ | 260/300 [00:00<00:00, best test F1Mi=0.838, F1Ma=0.825, ACC=0.838, time=0.248](LR):  93%|█████████▎| 280/300 [00:00<00:00, best test F1Mi=0.837, F1Ma=0.824, ACC=0.837, time=0.265](LR): 100%|██████████| 300/300 [00:00<00:00, best test F1Mi=0.837, F1Ma=0.824, ACC=0.837, time=0.265]
+(E) | evaluate: micro_f1=0.8375+-0.0000, macro_f1=0.0000+-0.0000, ACC=0.8375+-0.0000, time=0.2651+-0.0000
 current time:  3
-(E) | label_classification: F1Mi=0.8269+-0.0000, F1Ma=0.8126+-0.0000, ACC=0.8269+-0.0000, time=1.5554+-0.0000
+(LR):   0%|          | 0/300 [00:00<?](LR):   0%|          | 0/300 [00:00<?, best test F1Mi=0.552, F1Ma=0.401, ACC=0.552, time=0.0171](LR):   7%|▋         | 20/300 [00:00<00:00, best test F1Mi=0.677, F1Ma=0.575, ACC=0.677, time=0.0341](LR):  13%|█▎        | 40/300 [00:00<00:00, best test F1Mi=0.769, F1Ma=0.745, ACC=0.769, time=0.0511](LR):  20%|██        | 60/300 [00:00<00:00, best test F1Mi=0.801, F1Ma=0.792, ACC=0.801, time=0.0681](LR):  27%|██▋       | 80/300 [00:00<00:00, best test F1Mi=0.819, F1Ma=0.813, ACC=0.819, time=0.0882](LR):  33%|███▎      | 100/300 [00:00<00:00, best test F1Mi=0.83, F1Ma=0.824, ACC=0.83, time=0.105]  (LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.83, F1Ma=0.824, ACC=0.83, time=0.105](LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.832, F1Ma=0.826, ACC=0.832, time=0.122](LR):  47%|████▋     | 140/300 [00:00<00:00, best test F1Mi=0.837, F1Ma=0.829, ACC=0.837, time=0.139](LR):  53%|█████▎    | 160/300 [00:00<00:00, best test F1Mi=0.839, F1Ma=0.832, ACC=0.839, time=0.156](LR):  60%|██████    | 180/300 [00:00<00:00, best test F1Mi=0.84, F1Ma=0.832, ACC=0.84, time=0.173]  (LR):  67%|██████▋   | 200/300 [00:00<00:00, best test F1Mi=0.841, F1Ma=0.833, ACC=0.841, time=0.191](LR):  73%|███████▎  | 220/300 [00:00<00:00, best test F1Mi=0.841, F1Ma=0.833, ACC=0.841, time=0.208](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.841, F1Ma=0.833, ACC=0.841, time=0.208](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.844, F1Ma=0.836, ACC=0.844, time=0.229](LR):  87%|████████▋ | 260/300 [00:00<00:00, best test F1Mi=0.843, F1Ma=0.834, ACC=0.843, time=0.246](LR):  93%|█████████▎| 280/300 [00:00<00:00, best test F1Mi=0.842, F1Ma=0.834, ACC=0.842, time=0.263](LR): 100%|██████████| 300/300 [00:00<00:00, best test F1Mi=0.842, F1Ma=0.834, ACC=0.842, time=0.263]
+(E) | evaluate: micro_f1=0.8421+-0.0000, macro_f1=0.0000+-0.0000, ACC=0.8421+-0.0000, time=0.2626+-0.0000
 current time:  4
-(E) | label_classification: F1Mi=0.8339+-0.0000, F1Ma=0.8215+-0.0000, ACC=0.8339+-0.0000, time=1.5061+-0.0000
-ACC mean std:  0.8356252884171665 0.006587195525631908
-pre-training time, fune-tuning time: 0.4, 1.8
+(LR):   0%|          | 0/300 [00:00<?](LR):   0%|          | 0/300 [00:00<?, best test F1Mi=0.604, F1Ma=0.477, ACC=0.604, time=0.0175](LR):   7%|▋         | 20/300 [00:00<00:00, best test F1Mi=0.73, F1Ma=0.66, ACC=0.73, time=0.0344](LR):  13%|█▎        | 40/300 [00:00<00:00, best test F1Mi=0.793, F1Ma=0.779, ACC=0.793, time=0.0515](LR):  20%|██        | 60/300 [00:00<00:00, best test F1Mi=0.805, F1Ma=0.792, ACC=0.805, time=0.069] (LR):  27%|██▋       | 80/300 [00:00<00:00, best test F1Mi=0.816, F1Ma=0.804, ACC=0.816, time=0.0937](LR):  33%|███▎      | 100/300 [00:00<00:00, best test F1Mi=0.822, F1Ma=0.81, ACC=0.822, time=0.118] (LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.822, F1Ma=0.81, ACC=0.822, time=0.118](LR):  40%|████      | 120/300 [00:00<00:00, best test F1Mi=0.825, F1Ma=0.814, ACC=0.825, time=0.14](LR):  47%|████▋     | 140/300 [00:00<00:00, best test F1Mi=0.827, F1Ma=0.815, ACC=0.827, time=0.162](LR):  53%|█████▎    | 160/300 [00:00<00:00, best test F1Mi=0.827, F1Ma=0.815, ACC=0.827, time=0.183](LR):  60%|██████    | 180/300 [00:00<00:00, best test F1Mi=0.826, F1Ma=0.814, ACC=0.826, time=0.205](LR):  67%|██████▋   | 200/300 [00:00<00:00, best test F1Mi=0.824, F1Ma=0.81, ACC=0.824, time=0.226] (LR):  73%|███████▎  | 220/300 [00:00<00:00, best test F1Mi=0.826, F1Ma=0.811, ACC=0.826, time=0.247](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.826, F1Ma=0.811, ACC=0.826, time=0.247](LR):  80%|████████  | 240/300 [00:00<00:00, best test F1Mi=0.826, F1Ma=0.812, ACC=0.826, time=0.272](LR):  87%|████████▋ | 260/300 [00:00<00:00, best test F1Mi=0.828, F1Ma=0.814, ACC=0.828, time=0.293](LR):  93%|█████████▎| 280/300 [00:00<00:00, best test F1Mi=0.83, F1Ma=0.817, ACC=0.83, time=0.316]  (LR): 100%|██████████| 300/300 [00:00<00:00, best test F1Mi=0.83, F1Ma=0.817, ACC=0.83, time=0.316]
+(E) | evaluate: micro_f1=0.8301+-0.0000, macro_f1=0.0000+-0.0000, ACC=0.8301+-0.0000, time=0.3156+-0.0000
+ACC mean std:  0.8363804247460755 0.005195495806698137
+pre-training time, fune-tuning time: 0.3, 0.3
